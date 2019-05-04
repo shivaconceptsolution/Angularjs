@@ -1,0 +1,65 @@
+ANGULAR JS 1.0 and ANGULAR JS Framework 2.0,4.0,5.0,6.0,7.0
+....................................................................................................
+
+Q1 what is difference between Angular JS and normal javascript?
+
+Q2 what is directive elements in angular js?
+
+      ng-model
+      ng-bind
+     ng-repeat
+     ng-pattern
+     ng-style
+     
+
+Q3 what is $scope variable in Angular?
+
+
+Q4  what is Angular API?
+
+
+Q5  what is module in Angular JS and How we can create Module?
+
+
+Q6  what is Component and Sub Component and root Component?
+
+
+Q7 what is data binding concept in angular js ,explain one-way and two-way binding with example
+
+Q8 what is Property binding and Event binding?
+
+Q9 what is dependancy injection in angular JS .how we can implement them
+
+Q10 what SPA means Single Page Application?
+
+
+Q 11 what is Routing Concept.how we can create route?
+
+
+Q12 How we can navigate from one component to another?
+
+Q13 How we can pass data from one component to another?
+
+Q14 what is PIPE or Filter in Angular JS?
+
+
+Q15 How we create Custom Directive elements in Angular JS?
+
+
+Q16  How we use Filter ,Filter in Angular?
+
+
+Q17 what is Services difference between internal and external HTTp Services in Angular JS?
+
+
+Q18 Angular page life cycle?
+
+
+Q19 what is Typescript ,difference between JAVAScript and Typescript?
+
+
+Q20 How we can call WebServices in Angular JS for CRUD operation?
+
+
+
+
