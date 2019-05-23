@@ -1,0 +1,44 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <select  ng-model="a">
+            <option value="{{item.cid}}" ng-repeat="item in courses">{{item.cname}}</option>
+
+        </select>
+
+
+        {{a}}
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+            $scope.courses = [{ 'cid': '1001', 'cname': 'c' }, { 'cid': '1002', 'cname': 'cpp' }, { 'cid': '1003', 'cname': 'DS' }, { 'cid': '1004', 'cname': 'JAVA' }];
+
+            $scope.fun = function () {
+
+               $scope.data=a;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

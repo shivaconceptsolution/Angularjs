@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <input type="checkbox" ng-model="chk1" value="C" ng-click="fun($event)" />C
+        <br />
+        <input type="checkbox" ng-model="chk2" value="CPP" ng-click="fun($event)" />CPP
+        <br>
+        <br />
+        {{data1+data2}}
+    </div>
+   
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+          
+            
+            $scope.fun = function () {
+                data1 = "";
+                data2 = "";
+                alert(event.target.value);
+                if ($scope.chk1) 
+                    $scope.data1 = "C";
+                else
+                    $scope.data1 = "";
+                if ($scope.chk2)
+                    $scope.data2 = "CPP";
+                else
+                    $scope.data2 = "";
+                
+               
+            }
+          
+           
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

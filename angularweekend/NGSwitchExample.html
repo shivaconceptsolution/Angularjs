@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+
+
+</head>
+<body>
+
+    <div ng-app="">
+
+        <input type="radio" ng-model="basic" value="C" />C
+        <br />
+        <input type="radio" ng-model="basic" value="CPP" />CPP
+        <br />
+        <input type="radio" ng-model="basic" value="DS" />DS
+        <br />
+
+        <select ng-model="basic">
+            <option value="C">C</option>
+            <option value="CPP">CPP</option>
+            <option value="DS">DS</option>
+
+
+        </select>
+        <div ng-switch="basic">
+            <div ng-switch-when="C">
+
+                <p>Selected Course is C</p>
+            </div>
+            <div ng-switch-when="CPP">
+
+                <p>Selected Course is CPP</p>
+            </div>
+            <div ng-switch-when="DS">
+
+                <p>Selected Course is DS</p>
+            </div>
+        </div>
+        
+        <br />
+        
+
+    </div>
+
+
+</body>
+
+</html>

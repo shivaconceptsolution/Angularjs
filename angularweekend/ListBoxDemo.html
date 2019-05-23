@@ -1,0 +1,50 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <select  multiple ng-model="a" ng-click="fun()">
+            <option  ng-selected="u.selected" ng-repeat="u in courses" value="{{u.cname}}">
+                {{u.cname}}
+            </option>
+
+        </select>
+        <br />
+        <br />
+        {{data}}
+
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+            $scope.courses = [{ 'cid': '1001', 'cname': 'c' }, { 'cid': '1002', 'cname': 'cpp' }, { 'cid': '1003', 'cname': 'DS' }, { 'cid': '1004', 'cname': 'JAVA' }];
+            $scope.data = "";
+            $scope.fun = function () {
+                s = "";
+                for (i = 0; i < $scope.a.length; i++) {
+                    s = s + $scope.a[i]+" ";
+                }
+                $scope.data = s;
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

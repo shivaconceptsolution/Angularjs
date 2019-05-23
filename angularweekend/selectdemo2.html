@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <select ng-options="course.cname for course in courses"
+                ng-model="item" ng-change="fun()" multiple>
+            <option value="">--Select Course--</option>
+
+        </select>
+
+
+       
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+            $scope.courses = [{ 'cid': '1001', 'cname': 'c' }, { 'cid': '1002', 'cname': 'cpp' }, { 'cid': '1003', 'cname': 'DS' }, { 'cid': '1004', 'cname': 'JAVA' }];
+
+            $scope.fun = function () {
+
+               alert($scope.item.cname);
+               
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

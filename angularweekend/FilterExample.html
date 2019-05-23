@@ -1,0 +1,68 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+    <style>
+        .tbl1 {
+            background-color: cyan;
+        }
+
+        .tbl2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl" ng-init="total=0;">
+        <input type="text" ng-model="test" />
+        <table>
+            <tr><th>SRNO</th><th>RNO</th><th>SNAME</th><th>BRANCH</th><th>FEES</th></tr>
+
+
+            <!--  <tr ng-repeat="a in students|filter:test" ng-init="$parent.total=$parent.total+a.fees">-->
+
+            <tr ng-repeat="a in students|orderBy:['fees','rno']">
+
+            <td>{{a.rno}}</td>
+            <td>{{a.sname|uppercase}}</td>
+            <td>{{a.branch}}</td>
+            <td>{{a.fees|currency:'&#8377;'}}</td>
+
+
+
+
+
+
+
+            </tr>
+
+
+
+
+
+
+        </table>
+        {{total}}
+
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+            $scope.students = [
+                { 'rno': 1001, 'sname': 'xyz', 'branch': 'cs', 'fees': 15000 },
+                { 'rno': 1005, 'sname': 'xyz123', 'branch': 'cs', 'fees': 25000 },
+                { 'rno': 1006, 'sname': 'klmno', 'branch': 'it', 'fees': 15000 },
+                { 'rno': 1002, 'sname': 'test123', 'branch': 'it', 'fees': 25000 },
+                { 'rno': 1003, 'sname': 'abc12', 'branch': 'it', 'fees': 15000 },
+                { 'rno': 1004, 'sname': 'mno', 'branch': 'it', 'fees': 17000 }
+
+            ];
+
+        });
+
+
+    </script>
+
+</body>
+</html>

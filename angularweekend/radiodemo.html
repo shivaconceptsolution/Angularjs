@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl">
+        <input type="radio" ng-model="r1" value="C" name="course" ng-click="fun($event)" />C
+        <br />
+        <input type="radio" ng-model="r2" value="CPP" name="course" ng-click="fun($event)" />CPP
+        <br />
+        
+        {{data}}
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+
+
+            $scope.fun = function () {
+               
+               $scope.data=event.target.value;
+                
+
+
+            }
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

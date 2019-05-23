@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+    <style>
+        .tbl1
+        {
+            background-color:cyan;
+        }
+        .tbl2{
+            background-color:yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="myCtrl" ng-init="total=0;">
+        <table>
+            <tr><th>SRNO</th><th>RNO</th><th>SNAME</th><th>BRANCH</th><th>FEES</th></tr>
+          
+            <tr ng-repeat="a in students;" ng-init="$parent.total=$parent.total+a.fees">
+
+
+
+                <td>{{a.rno}}</td>
+                <td>{{a.sname}}</td>
+                <td>{{a.branch}}</td>
+                <td>{{a.fees}}</td>
+               
+
+
+
+
+
+
+            </tr>
+
+            
+
+
+
+
+        </table>
+        {{total}}
+       
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myCtrl", function ($scope) {
+
+            $scope.students = [
+                { 'rno': 1001, 'sname': 'xyz', 'branch': 'cs', 'fees': 15000 },
+                { 'rno': 1002, 'sname': 'test123', 'branch': 'it', 'fees': 25000 },
+                { 'rno': 1003, 'sname': 'abc12', 'branch': 'it', 'fees': 15000 },
+                { 'rno': 1004, 'sname': 'mno', 'branch': 'it', 'fees': 17000 }
+
+            ];
+
+        });
+
+
+    </script>
+
+</body>
+</html>
