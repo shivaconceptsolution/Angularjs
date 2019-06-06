@@ -14,26 +14,13 @@
     </style>
 </head>
 <body>
-    <div ng-app="myapp" ng-controller="myCtrl" ng-init="total=0;">
+    <div ng-app="myapp" ng-controller="myCtrl" ng-init="total=0;m=500;max=0">
         <table>
-            <tr><th>SRNO</th><th>RNO</th><th>SNAME</th><th>BRANCH</th><th>FEES</th></tr>
           
-            <tr ng-repeat="a in students;" ng-init="$parent.total=$parent.total+a.fees">
-
-
-
-                <td>{{a.rno}}</td>
-                <td>{{a.sname}}</td>
-                <td>{{a.branch}}</td>
-                <td>{{a.fees}}</td>
-               
-
-
-
-
-
-
-            </tr>
+          
+            <tr ng-repeat="a in students;" ng-if="$parent.max>a.fees;" >
+             <td>{{parent.max}}</td>
+           </tr>
 
             
 
@@ -41,9 +28,8 @@
 
 
         </table>
-        {{total}}
-       
-    </div>
+        {{max}}
+        
 
     <script>
         var app = angular.module("myapp", []);

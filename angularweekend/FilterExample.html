@@ -13,15 +13,15 @@
 </head>
 <body>
     <div ng-app="myapp" ng-controller="myCtrl" ng-init="total=0;">
-        <input type="text" ng-model="test" />
+        <input type="text" ng-model="s" />
         <table>
             <tr><th>SRNO</th><th>RNO</th><th>SNAME</th><th>BRANCH</th><th>FEES</th></tr>
 
 
             <!--  <tr ng-repeat="a in students|filter:test" ng-init="$parent.total=$parent.total+a.fees">-->
 
-            <tr ng-repeat="a in students|orderBy:['fees','rno']">
-
+            <tr ng-repeat="a in students|filter:s">
+            <td>{{$index+1}}</td>
             <td>{{a.rno}}</td>
             <td>{{a.sname|uppercase}}</td>
             <td>{{a.branch}}</td>
