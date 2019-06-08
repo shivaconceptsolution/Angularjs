@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<script src="angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+
+
+<style type="text/css">
+    *
+    {
+    	margin:0px;
+    }
+	header,footer
+	{
+		background-color: gray;
+		height: 150px;
+		color:white;
+	}
+  header a
+  {
+  	color:white;
+  	font-size: 25px;
+  	text-decoration: none;
+  }
+   section
+   {
+   	height: 400px;
+   	background-color: cyan;
+   }
+</style>
+</head>
+<body >
+	<header>
+
+    <a href="#/">Home</a>
+    <a href="#/blog">Blog</a>
+    <a href="#/about">About</a>	
+     <a href="#/services">Services</a>	
+ </header>
+ <section>
+ 	<div ng-view></div>
+ </section>
+   <footer>
+
+   </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
